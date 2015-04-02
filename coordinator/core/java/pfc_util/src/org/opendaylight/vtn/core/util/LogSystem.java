@@ -96,6 +96,18 @@ public final class LogSystem implements LogFatalHandler
 		return LogSystemHolder._theInstance;
 	}
 
+    /**
+     * <p>
+     *   Return the global {@code TraceLogImpl} instance
+     * </p>
+     *
+     * @return The {@code TraceLogImpl} instance.
+     */
+    public static TraceLogImpl getTraceLogger()
+    {
+        return TraceLogImpl.getInstance();
+    }
+
 	/**
 	 * <p>
 	 *   Initialize the PFC-Core logging system.

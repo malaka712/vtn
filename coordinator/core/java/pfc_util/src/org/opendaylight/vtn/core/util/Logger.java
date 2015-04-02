@@ -135,7 +135,7 @@ public abstract class Logger
 	 */
 	public static Logger getLogger(String name)
 	{
-		return TraceLogImpl.getInstance().getLogger(name);
+		return LogSystem.getTraceLogger().getLogger(name);
 	}
 
 	/**
@@ -1272,7 +1272,7 @@ public abstract class Logger
 		@Override
 		int getCurrentLevel()
 		{
-			return TraceLogImpl.getInstance().getLogLevel();
+			return LogSystem.getTraceLogger().getLogLevel();
 		}
 
 		/**

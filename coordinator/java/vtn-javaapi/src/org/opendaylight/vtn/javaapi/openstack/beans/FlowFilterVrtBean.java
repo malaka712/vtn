@@ -59,6 +59,16 @@ public class FlowFilterVrtBean {
 		this.vbrName = vbrName;
 	}
 	
+    public int hashCode(){
+        int hash = this.vtnName.hashCode();
+        hash += (this.vrtName.hashCode() << 2);
+        hash += (this.vrtIfName.hashCode() >> 4);
+        hash += (this.flName.hashCode() << 2);
+        hash += (this.vbrName.hashCode() >> 4);
+
+        return hash;
+    }
+
 	public boolean equals(Object obj) {   
         if (obj instanceof FlowFilterVrtBean) {   
         	FlowFilterVrtBean u = (FlowFilterVrtBean) obj;   
